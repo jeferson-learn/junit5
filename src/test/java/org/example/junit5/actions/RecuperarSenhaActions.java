@@ -11,8 +11,8 @@ public class RecuperarSenhaActions {
         recuperarContaObjects = new RecuperarContaObjects(driver);
     }
 
-    public void recuperarSenha(){
-        recuperarContaObjects.getInputRecuperarEmail().sendKeys("email@email.com");
+    public void recuperarSenha(String email){
+        recuperarContaObjects.getInputRecuperarEmail().sendKeys(email);
         recuperarContaObjects.getButRecuperarEmail().click();
     }
 }
