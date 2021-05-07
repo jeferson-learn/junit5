@@ -32,14 +32,14 @@ public class TesteFacebook {
         recuperarSenhaActions = new RecuperarSenhaActions(driver);
     }
 
-    @Disabled
     @Test
     @Tag("credenciais")
     public void logarFacebook() {
+        Assertions.assertEquals("https://www.facebook.com/", driver.getCurrentUrl());
         homeActions.login();
     }
 
-    @Disabled("O teste de criar conta foi desabilitado")
+//    @Disabled("O teste de criar conta foi desabilitado")
     @Tag("credenciais")
     @Test
     public void criarConta() {
@@ -51,6 +51,9 @@ public class TesteFacebook {
     @Tag("recuperação")
     public void recuperarSenha(String email) {
         homeActions.recuperarSenha();
+
+        Assertions.assertTrue(driver.getTitle().contains("Esqueci a senha"), "Não contem as palavras no titulo");
+
         recuperarSenhaActions.recuperarSenha(email);
     }
 
