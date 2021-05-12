@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class TesteNewtours {
+public class TesteNewtoursJunit5 {
 
     private WebDriver driver;
     private static NewtoursHomeActions homeActions;
