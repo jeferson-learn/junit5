@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite Camada Testes">
+    <test verbose="2" preserve-order="true" name="Teste newtours testNg">
+<!--        <classes>-->
+<!--            <class name="org.example.newtours.test.TesteNewtoursTestNg"/>-->
+<!--        </classes>-->
+        <packages>
+            <package name="org.example.newtours.test"></package>
+        </packages>
+    </test>
+</suite>
