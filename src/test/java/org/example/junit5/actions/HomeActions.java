@@ -20,4 +20,16 @@ public class HomeActions {
     public void recuperarSenha() {
         homeObjects.getButEsquecerSenha().click();
     }
+
+    public void criarNovaConta() {
+        homeObjects.getButCriarNovaConta().click();
+        homeObjects.getInputNome().sendKeys("D'Alessandro");
+        homeObjects.getInputSobrenome().sendKeys("Lopez Souza");
+    }
+
+    public void criarNovaContaElementos() {
+        homeObjects.getButCriarNovaConta().click();
+        homeObjects.getListaElementoNome().sendKeys("Fernando");
+        homeObjects.getListaElementoSobrenome().sendKeys("Colorado");
+    }
 }
