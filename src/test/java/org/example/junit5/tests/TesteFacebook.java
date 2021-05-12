@@ -9,6 +9,8 @@ import org.junit.jupiter.params.provider.ValueSource;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class TesteFacebook {
 
     private static WebDriver driver;
@@ -24,6 +26,7 @@ public class TesteFacebook {
     public void abrirFacebook() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("http://www.facebook.com");
 
@@ -55,6 +58,12 @@ public class TesteFacebook {
         Assertions.assertTrue(driver.getTitle().contains("Esqueci a senha"), "Não contem as palavras no titulo");
 
         recuperarSenhaActions.recuperarSenha(email);
+    }
+
+    @Test
+    public void criarContaParaUsuario() {
+//        homeActions.criarNovaConta();
+        homeActions.criarNovaContaElementos();
     }
 
     @AfterEach
